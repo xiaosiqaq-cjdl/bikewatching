@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bikewatching</title>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v3.35.0/mapbox-gl.css" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.35.0/mapbox-gl.js"></script>
+    
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./map.js"></script>
+
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+</head>
+
+<body>
+    <header>
+    <header>
+        <div>
+            <h1>🚲 Bikewatching</h1>
+            <p>Exploring bike traffic in Boston and Cambridge.</p>
+        </div>
+    
+        <label class="time-filter" for="time-slider">
+            Filter by time:
+            <input id="time-slider" type="range" min="-1" max="1439" step="1" value="-1" />
+            <time id="selected-time"></time>
+            <em id="any-time">(any time)</em>
+        </label>
+    </header>
+    </header>
+    <p class="chart-note">
+        Circle size shows total arrivals + departures.
+        Color shows the balance between them.
+        Select a time to view activity within ±60 minutes across March 2024.
+    </p>
+
+    <div id="map"></div>
+    <div class="legend">
+        <span><i style="background: steelblue"></i> More arrivals</span>
+        <span><i style="background: #9370db"></i> Balanced</span>
+        <span><i style="background: darkorange"></i> More departures</span>
+    </div>
+</body>
+
+</html>

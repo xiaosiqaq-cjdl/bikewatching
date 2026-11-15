@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+    font-family: system-ui, sans-serif;
+    color: #243746;
+    background: #f8fafc;
+}
+
+header {
+    margin-bottom: 24px;
+}
+
+h1 {
+    margin: 0 0 8px;
+}
+
+header p {
+    margin: 0;
+    color: #607080;
+}
+
+#map {
+    width: 100%;
+    height: 70vh;
+    min-height: 400px;
+    border: 1px solid #ccd6df;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #e8eef2;
+}
+#map {
+    position: relative;
+}
+
+#map svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+#map svg circle {
+    pointer-events: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.time-filter {
+    display: grid;
+    gap: 6px;
+    width: 280px;
+    max-width: 100%;
+}
+
+#time-slider {
+    width: 100%;
+    margin: 0;
+}
+
+#selected-time,
+#any-time {
+    grid-column: 1;
+    grid-row: 3;
+    min-height: 1.5em;
+    text-align: right;
+}
+
+#any-time {
+    color: #607080;
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    margin-top: 16px;
+    font-size: 0.9rem;
+}
+
+.legend span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legend i {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+.chart-note {
+    margin: 0 0 12px;
+    color: #607080;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
